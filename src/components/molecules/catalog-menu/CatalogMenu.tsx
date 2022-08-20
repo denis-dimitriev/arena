@@ -11,10 +11,10 @@ import { useContext } from "react";
 import { CatalogContext } from "../../../context/catalog.context";
 
 export const CatalogMenu = () => {
-  const { open } = useContext(CatalogContext);
+  const { openCatalog } = useContext(CatalogContext);
 
   return (
-    <div className={`catalog-menu ${open && "open"}`}>
+    <div className={`catalog-menu ${openCatalog && "open"}`}>
       <ul className="catalog-menu__list">
         <li className="list-item">
           <NavLink className="item-link" to="#">

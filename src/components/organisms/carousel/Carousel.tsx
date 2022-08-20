@@ -2,7 +2,7 @@ import "./Carousel.scss";
 
 import { ArrowLeftIcon, ArrowRightIcon } from "../../../assets";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Card } from "../../molecules/card/Card";
 
 interface Icarousel {
   id: number;
@@ -112,8 +112,6 @@ export const Carousel = () => {
   const fullWidthCarousel = itemCarouselWidth * totalItem;
   const limitPosition = -Math.abs(fullWidthCarousel - currentWidthCarousel);
 
-  useEffect(() => {}, []);
-
   const moveRightHandler = () => {
     setPositionX((prev) => {
       if (prev === limitPosition) {
@@ -142,17 +140,7 @@ export const Carousel = () => {
       >
         {carousel.map((card) => {
           const { id, title, img, price } = card;
-          return (
-            <div key={id} className="card">
-              <Link to="#">
-                <img src={img} alt="" />
-                <div className="card-info">
-                  <h5 className="card-title">{title}</h5>
-                  <h5 className="card-price">{price} mdl</h5>
-                </div>
-              </Link>
-            </div>
-          );
+          return <Card id={id} title={title} img={img} price={price} />;
         })}
       </div>
       <div className="carousel__actions">

@@ -1,0 +1,30 @@
+@import "src/scss/base";
+
+.card {
+  min-width: rem(320px);
+  padding: rem(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  img {
+    max-width: 100%;
+    border-radius: rem(4px);
+  }
+
+  .card-info {
+    .card-title {
+      font-size: rem(16px);
+      font-weight: 500;
+      padding: rem(5px) 0;
+      color: $dark;
+    }
+
+    .card-price {
+      font-size: rem(15px);
+      font-weight: 700;
+      padding: rem(5px) 0;
+      color: $red;
+    }
+  }
+}

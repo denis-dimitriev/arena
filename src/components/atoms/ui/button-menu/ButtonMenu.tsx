@@ -8,14 +8,14 @@ interface ButtonMenuProps {
 }
 
 export const ButtonMenu: React.FC<ButtonMenuProps> = ({ children }) => {
-  const { open, setOpen } = useContext(CatalogContext);
+  const { openCatalog, setOpenCatalog } = useContext(CatalogContext);
 
-  const toggleMenuHandler = () => setOpen((prev) => !prev);
+  const toggleMenuHandler = () => setOpenCatalog((prev) => !prev);
 
   return (
     <button
       type="button"
-      className={`button-menu ${open && "open"}`}
+      className={`button-menu ${openCatalog && "open"}`}
       onClick={toggleMenuHandler}
     >
       {children}

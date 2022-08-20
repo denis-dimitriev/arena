@@ -8,18 +8,20 @@
 $main-black: #0E1821;
 $dark: #0E1821;
 $dark-blue: #2A5275;
+$dark-blue-rgba: rgba(42, 82, 117, 0.8);
 $red: #D73838;
 $gray: #48A69B;
 $orange: #F37748;
 $blue: #4878A6;
 $light-blue: #EDF2F6;
+$light-blue-hover: #DAE4ED;
 
 
 $font-size: rem(16);
 
-$min-width: 320px;
-$max-width: 1920px;
-$container-width: 1300px;
+$min-width: em(320px);
+$max-width: em(1920px);
+$container-width: em(1300px);
 $container-padding: 20px;
 $max-width-container: $container-width + $container-padding;
 
@@ -46,10 +48,8 @@ $mobile: 480px;
 
 [class*="__container"] {
   margin: 0 auto;
-  @if ($max-width-container>0) {
-    max-width: $max-width-container;
-    min-width: $min-width;
-    padding: 0 $container-padding / 2;
-    box-sizing: border-box;
-  }
+  max-width: $max-width-container;
+  min-width: $min-width;
+  padding: 0 $container-padding / 2;
+  box-sizing: border-box;
 }

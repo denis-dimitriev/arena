@@ -9,15 +9,28 @@
   height: 64px;
   padding: 0 rem(10px);
   background-color: $dark-blue;
+  z-index: 1000;
 
   &__list {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    column-gap: 10%;
+    column-gap: 5%;
 
     .list-item {
+
+      button {
+        display: block;
+        align-items: center;
+        justify-content: center;
+        padding: rem(6px);
+        height: 100%;
+
+        svg {
+          fill: white;
+        }
+      }
 
       &.search-hidden {
         display: none;

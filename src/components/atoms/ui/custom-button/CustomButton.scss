@@ -3,8 +3,8 @@
 .button {
   width: rem(100px);
   height: rem(42px);
-  background-color: $dark-blue;
-  border: 1px solid $dark;
+  background-color: $dark;
+  border: 1px solid $light-blue;
   border-radius: 4px;
   color: #FFFFFF;
   cursor: pointer;
@@ -21,7 +21,7 @@
   }
 
   &:hover, &:active {
-    background-color: $blue;
+    background-color: $dark-blue;
   }
 }
 

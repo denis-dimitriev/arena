@@ -5,14 +5,17 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./components/App";
 import { CatalogContextProvider } from "./context/catalog.context";
+import { MobileModalProvider } from "./context/mobile-modal";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
-  <CatalogContextProvider>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </CatalogContextProvider>
+  <BrowserRouter>
+    <CatalogContextProvider>
+      <MobileModalProvider>
+        <App />
+      </MobileModalProvider>
+    </CatalogContextProvider>
+  </BrowserRouter>
 );

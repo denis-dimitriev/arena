@@ -7,13 +7,13 @@ import React, {
 } from "react";
 
 type CatalogType = {
-  open: boolean;
-  setOpen: Dispatch<SetStateAction<boolean>>;
+  openCatalog: boolean;
+  setOpenCatalog: Dispatch<SetStateAction<boolean>>;
 };
 
 export const CatalogContext = createContext<CatalogType>({
-  open: false,
-  setOpen: () => {},
+  openCatalog: false,
+  setOpenCatalog: () => {},
 });
 
 interface IProvider {
@@ -21,11 +21,11 @@ interface IProvider {
 }
 
 export const CatalogContextProvider: React.FC<IProvider> = ({ children }) => {
-  const [open, setOpen] = useState<boolean>(false);
+  const [openCatalog, setOpenCatalog] = useState<boolean>(false);
 
   const valueContext = {
-    open,
-    setOpen,
+    openCatalog,
+    setOpenCatalog,
   };
 
   return (

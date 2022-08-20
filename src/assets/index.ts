@@ -12,6 +12,7 @@ import { ReactComponent as ArrowLeftIcon } from "./svg-icons/arrow-left.svg";
 import { ReactComponent as UserIcon } from "./svg-icons/user.svg";
 import { ReactComponent as HomeIcon } from "./svg-icons/home.svg";
 import { ReactComponent as MoreIcon } from "./svg-icons/more.svg";
+import { ReactComponent as CloseIcon } from "./svg-icons/close.svg";
 
 export {
   SearchIcon,
@@ -28,4 +29,5 @@ export {
   UserIcon,
   HomeIcon,
   MoreIcon,
+  CloseIcon,
 };

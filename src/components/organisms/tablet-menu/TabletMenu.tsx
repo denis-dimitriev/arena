@@ -8,10 +8,22 @@ import {
   ShoppingCartIcon,
 } from "../../../assets";
 import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { CatalogContext } from "../../../context/catalog.context";
+import { MobileModalContext } from "../../../context/mobile-modal";
+import { CustomButton } from "../../atoms/ui/custom-button/CustomButton";
 
 export const TabletMenu = () => {
+  const { setOpenCatalog } = useContext(CatalogContext);
+  const { setOpenMobileModal } = useContext(MobileModalContext);
+
+  const openMenuHandler = () => {
+    setOpenMobileModal(true);
+    setOpenCatalog(true);
+  };
+
   return (
-    <nav className="tablet-menu">
+    <div className="tablet-menu">
       <ul className="tablet-menu__list">
         <li className="list-item">
           <NavLink className="item-link" to="#">
@@ -20,30 +32,30 @@ export const TabletMenu = () => {
           </NavLink>
         </li>
         <li className="list-item">
-          <NavLink className="item-link" to="#">
+          <CustomButton ghost onClick={openMenuHandler}>
             <MenuIcon />
             Каталог
-          </NavLink>
+          </CustomButton>
         </li>
         <li className="list-item">
-          <NavLink className="item-link" to="#">
+          <CustomButton ghost>
             <ShoppingCartIcon />
             Корзина
-          </NavLink>
+          </CustomButton>
         </li>
         <li className="list-item search-hidden">
-          <NavLink className="item-link" to="#">
+          <CustomButton ghost>
             <SearchIcon />
             Поиск
-          </NavLink>
+          </CustomButton>
         </li>
         <li className="list-item">
-          <NavLink className="item-link" to="#">
+          <CustomButton ghost>
             <MoreIcon />
             Ещё
-          </NavLink>
+          </CustomButton>
         </li>
       </ul>
-    </nav>
+    </div>
   );
 };

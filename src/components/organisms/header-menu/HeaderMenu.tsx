@@ -3,6 +3,7 @@ import "./HeaderMenu.scss";
 import { ButtonMenu } from "../../atoms/ui/button-menu/ButtonMenu";
 import { MenuIcon } from "../../../assets";
 import { NavMenu } from "../../molecules/nav-menu/NavMenu";
+import { CatalogMenu } from "../../molecules/catalog-menu/CatalogMenu";
 
 export const HeaderMenu = () => {
   return (
@@ -16,6 +17,7 @@ export const HeaderMenu = () => {
           <NavMenu />
         </div>
       </div>
+      <CatalogMenu />
     </div>
   );
 };
