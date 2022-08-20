@@ -1,0 +1,37 @@
+@import "src/scss/base";
+
+.top-header {
+  background-color: white;
+  padding: 10px 0;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    min-height: 60px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__search {
+    padding: 0 rem(24px);
+  }
+
+  &__user-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (max-width: $medium-tablet) {
+  .top-header {
+    padding: 0;
+    &__container {
+      grid-template-columns: minmax(25%, 315px) minmax(25%, 315px)
+    }
+
+    &__search {
+      display: none;
+    }
+  }
+}

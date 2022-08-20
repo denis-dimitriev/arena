@@ -1,0 +1,84 @@
+@import "src/scss/base";
+
+.carousel {
+  max-width: 1280px;
+  margin: 0 auto;
+  min-height: rem(300px);
+  position: relative;
+  display: block;
+  overflow: hidden;
+
+
+  &__list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transform: translateX(0);
+    transition: transform 0.3s linear;
+
+      .card {
+        min-width: rem(320px);
+        padding: rem(10px);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        img {
+          max-width: 100%;
+          border-radius: rem(4px);
+        }
+
+        .card-info {
+          .card-title {
+            font-size: rem(16px);
+            font-weight: 500;
+            padding: rem(5px) 0;
+            color: $dark;
+          }
+
+          .card-price {
+            font-size: rem(15px);
+            font-weight: 700;
+            padding: rem(5px) 0;
+            color: $red;
+          }
+        }
+    }
+  }
+
+  &__actions {
+    width: 100%;
+    position: absolute;
+    top: calc(50% - 50px);
+    bottom: calc(50% + 50px);
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+
+    .action-btn {
+      width: rem(50px);
+      height: rem(50px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $light-blue;
+      border: 1px solid $gray;
+      border-radius: 50%;
+      cursor: pointer;
+
+      svg {
+        width: rem(14px);
+      }
+
+      &:hover {
+        background-color: white;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .carousel {
+    display: none;
+  }
+}

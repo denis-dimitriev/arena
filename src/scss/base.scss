@@ -1,0 +1,55 @@
+@use 'sass:math';
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600;700&display=swap');
+
+
+/* variables */
+
+$main-black: #0E1821;
+$dark: #0E1821;
+$dark-blue: #2A5275;
+$red: #D73838;
+$gray: #48A69B;
+$orange: #F37748;
+$blue: #4878A6;
+$light-blue: #EDF2F6;
+
+
+$font-size: rem(16);
+
+$min-width: 320px;
+$max-width: 1920px;
+$container-width: 1300px;
+$container-padding: 20px;
+$max-width-container: $container-width + $container-padding;
+
+$pc: 1920px;
+$tablet: 992px;
+$medium-tablet: 768px;
+$mobile: 480px;
+
+@function prc($value) {
+  $result: math.percentage($value);
+  @return $result;
+}
+
+@function rem($value) {
+  $result: math.div($value, 16px) + rem;
+  @return $result;
+}
+
+@function em($value) {
+  $result: math.div($value, 16px) + em;
+  @return $result;
+}
+
+
+[class*="__container"] {
+  margin: 0 auto;
+  @if ($max-width-container>0) {
+    max-width: $max-width-container;
+    min-width: $min-width;
+    padding: 0 $container-padding / 2;
+    box-sizing: border-box;
+  }
+}

@@ -1,0 +1,37 @@
+@import "src/scss/base";
+
+.catalog-menu {
+  overflow: hidden;  /* Hide the element content, while height = 0 */
+  height: 0;
+  opacity: 0;
+  transition: height 0ms 400ms, opacity 400ms 0ms;
+  max-width: 315px;
+  background-color: $light-blue;
+  border-radius: 0 0 8px 8px;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    .list-item {
+      padding: 12px 0;
+
+      .item-link {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+        font-size: rem(16px);
+
+        svg {
+          width: rem(25px);
+        }
+      }
+    }
+  }
+
+  &.open {
+    height: auto; opacity: 1;
+    transition: height 0ms 0ms, opacity 600ms 0ms;
+  }
+}

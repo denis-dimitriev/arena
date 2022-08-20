@@ -1,0 +1,11 @@
+@import "src/scss/base";
+
+.header {
+  height: 140px;
+}
+
+@media screen and (max-width: $tablet){
+  .header {
+    height: 72px;
+  }
+}

@@ -1,0 +1,26 @@
+@import "src/scss/base";
+
+.user-actions {
+  flex: 0 0 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  &__link {
+    padding: 0 7%;
+  }
+}
+
+@media screen and (max-width: $tablet){
+  .user-actions {
+    &__link.cart-hidden {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile){
+  .user-actions {
+      display: none;
+  }
+}

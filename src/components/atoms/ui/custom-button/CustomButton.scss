@@ -1,0 +1,37 @@
+@import "src/scss/base";
+
+.button {
+  width: rem(100px);
+  height: rem(42px);
+  background-color: $dark-blue;
+  border: 1px solid $dark;
+  border-radius: 4px;
+  color: #FFFFFF;
+  cursor: pointer;
+  padding: 12px 16px;
+  font-size: $font-size;
+  text-align: center;
+  transition: all 80ms ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  &:disabled {
+    opacity: .5;
+  }
+
+  &:hover, &:active {
+    background-color: $blue;
+  }
+}
+
+.ghost {
+  min-width: rem(30px);
+  background-color: transparent;
+  border: none;
+
+  &:hover, &:active {
+    background-color: transparent;
+      transform: scale(1.1);
+  }
+}

@@ -1,0 +1,15 @@
+@import "src/scss/base";
+
+.logo {
+    max-width: 315px;
+    font-weight: 700;
+    font-size: em(32px);
+    line-height: 43px;
+    color: #0E1821;
+}
+
+@media screen and (max-width: $mobile){
+    .logo {
+
+    }
+}

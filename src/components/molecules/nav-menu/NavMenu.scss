@@ -1,0 +1,24 @@
+@import "src/scss/base";
+
+.nav-menu {
+  flex: 1 1 auto;
+  font-size: rem(14px);
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: rem(30px);
+
+    .list__item {
+      .item-link {
+        color: white;
+        transition: color 0.2s ease-in-out;
+
+        &:hover {
+          color: $light-blue;
+        }
+      }
+    }
+    }
+}
