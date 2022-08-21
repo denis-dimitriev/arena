@@ -1,0 +1,73 @@
+@import "src/scss/base";
+
+.tablet-menu {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 64px;
+  padding: 0 rem(10px);
+  background-color: $dark-blue;
+  z-index: 1000;
+  @media (max-width: $big-tablet) {
+    & {
+      display: block;
+    }
+  }
+
+  &__list {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5%;
+  }
+
+  &__list-item {
+
+    button {
+      display: block;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+
+      .item-title {
+        font-size: rem(12px);
+        color: white;
+      }
+      @media screen and (max-width: $small-tablet) {
+        & {
+          max-width: rem(50px);
+          .item-title {
+            display: none;
+          }
+        }
+      }
+      svg {
+        fill: white;
+      }
+    }
+
+    &_search-hidden {
+      display: none;
+
+      @media (max-width: $medium-tablet) {
+        display: block;
+      }
+    }
+
+    .item-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: rem(5px);
+
+      svg {
+        fill: white;
+      }
+    }
+
+  }
+}
+

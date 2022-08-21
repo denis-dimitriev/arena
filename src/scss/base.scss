@@ -26,9 +26,11 @@ $container-padding: 20px;
 $max-width-container: $container-width + $container-padding;
 
 $pc: 1920px;
-$tablet: 992px;
+$big-tablet: 992px;
 $medium-tablet: 768px;
+$small-tablet: 601px;
 $mobile: 480px;
+$small-mobile: 480px;
 
 @function prc($value) {
   $result: math.percentage($value);

@@ -8,8 +8,13 @@
   height: 100vh;
   padding: rem(20px);
   background-color: $dark-blue-rgba;
-  z-index: 99;
+  z-index: 999;
   overflow: hidden;
+  -webkit-animation: fadein 500ms; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 500ms; /* Firefox < 16 */
+  -ms-animation: fadein 500ms; /* Internet Explorer */
+  -o-animation: fadein 500ms; /* Opera < 12.1 */
+  animation: fadein 500ms;
 
   &__container {
     width: 100%;
@@ -23,8 +28,8 @@
     border-radius: 10px;
 
     .container-top {
-      padding-top: rem(40px);
-      height: rem(60px);
+      padding: rem(40px) 0;
+      height: rem(150px);
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -34,5 +39,19 @@
         font-size: 28px;
       }
     }
+
+    .container-body {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
   }
+}
+
+@keyframes fadein {
+  from { transform: translateY(100%) }
+  to   { transform: translateY(0) }
 }

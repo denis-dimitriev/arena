@@ -3,24 +3,21 @@ import "./MobileModal.scss";
 import { CustomButton } from "../../atoms/ui/custom-button/CustomButton";
 import { CloseIcon } from "../../../assets";
 import React, { ReactNode, useContext } from "react";
-import { CatalogContext } from "../../../context/catalog.context";
 import { MobileModalContext } from "../../../context/mobile-modal";
 
 interface MobileModalProps {
   children: ReactNode;
-  title: "Каталог" | "Корзина" | "Еще";
+  title: "Каталог" | "Корзина" | "Поиск" | "Еще";
 }
 
 export const MobileModal: React.FC<MobileModalProps> = ({
   children,
   title,
 }) => {
-  const { setOpenCatalog } = useContext(CatalogContext);
-  const { setOpenMobileModal } = useContext(MobileModalContext);
+  const { setCallerAction } = useContext(MobileModalContext);
 
   const closeMenuHandler = () => {
-    setOpenMobileModal(false);
-    setOpenCatalog(false);
+    setCallerAction("close");
   };
 
   return (
@@ -32,7 +29,7 @@ export const MobileModal: React.FC<MobileModalProps> = ({
             <CloseIcon />
           </CustomButton>
         </div>
-        {children}
+        <div className="container-body">{children}</div>
       </div>
     </div>
   );
