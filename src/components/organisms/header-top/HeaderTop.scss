@@ -2,7 +2,7 @@
 
 .top-header {
   background-color: white;
-  padding: 10px 0;
+  padding: rem(10px) 0;
 
   &__container {
     display: grid;
@@ -23,7 +23,7 @@
   }
 }
 
-@media screen and (max-width: $medium-tablet) {
+@media (max-width: $medium-tablet) {
   .top-header {
     &__container {
       grid-template-columns: minmax(25%, 315px) minmax(25%, 315px)

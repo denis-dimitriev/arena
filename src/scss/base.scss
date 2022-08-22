@@ -19,9 +19,9 @@ $light-blue-hover: #DAE4ED;
 
 $font-size: rem(16);
 
-$min-width: em(320px);
-$max-width: em(1920px);
-$container-width: em(1300px);
+$min-width: 320px;
+$max-width: 1920px;
+$container-width: 1300px;
 $container-padding: 20px;
 $max-width-container: $container-width + $container-padding;
 

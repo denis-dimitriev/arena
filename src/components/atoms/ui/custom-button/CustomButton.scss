@@ -1,20 +1,20 @@
 @import "src/scss/base";
 
 .button {
-  width: rem(100px);
-  height: rem(42px);
+  display: inline-block;
   background-color: $dark;
   border: 1px solid $light-blue;
   border-radius: 4px;
   color: #FFFFFF;
   cursor: pointer;
-  padding: 12px 16px;
+  padding: em(16px) em(20px);
   font-size: $font-size;
+  font-weight:600;
   text-align: center;
   transition: all 80ms ease-in-out;
   user-select: none;
   -webkit-user-select: none;
-  touch-action: manipulation;
+
 
   &:disabled {
     opacity: .5;
@@ -26,12 +26,19 @@
 }
 
 .ghost {
-  min-width: rem(30px);
+  min-width: em(30px);
   background-color: transparent;
+  padding: 0;
   border: none;
 
   &:hover, &:active {
     background-color: transparent;
       transform: scale(1.1);
+  }
+}
+
+@media (max-width: $big-tablet) {
+  .button {
+    display: block;
   }
 }

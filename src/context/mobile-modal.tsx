@@ -15,6 +15,7 @@ type MobileModalType = {
   setOpenMobileModal: Dispatch<SetStateAction<boolean>>;
   setCallerAction: Dispatch<SetStateAction<ActionCaller>>;
   renderingMobileMenu: JSX.Element | undefined;
+  setCloseMobileModal: () => void;
 };
 
 export const MobileModalContext = createContext<MobileModalType>({
@@ -22,6 +23,7 @@ export const MobileModalContext = createContext<MobileModalType>({
   setOpenMobileModal: () => {},
   setCallerAction: () => {},
   renderingMobileMenu: undefined,
+  setCloseMobileModal: () => {},
 });
 
 interface IMobileModal {
@@ -48,6 +50,11 @@ export const MobileModalProvider: React.FC<IMobileModal> = ({ children }) => {
     }
   };
 
+  const setCloseMobileModal = () => {
+    const timeout = setTimeout(() => setCallerAction("close"), 300);
+    return () => clearTimeout(timeout);
+  };
+
   const renderingMobileMenu = setMobileMenuHandler();
 
   const valueContext = {
@@ -55,6 +62,7 @@ export const MobileModalProvider: React.FC<IMobileModal> = ({ children }) => {
     setOpenMobileModal,
     setCallerAction,
     renderingMobileMenu,
+    setCloseMobileModal,
   };
   return (
     <MobileModalContext.Provider value={valueContext}>

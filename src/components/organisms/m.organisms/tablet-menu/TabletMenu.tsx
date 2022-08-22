@@ -13,9 +13,9 @@ import React, { useContext } from "react";
 import { MobileModalContext } from "../../../../context/mobile-modal";
 
 export const TabletMenu = () => {
-  const { setCallerAction } = useContext(MobileModalContext);
+  const { setCallerAction, setCloseMobileModal } =
+    useContext(MobileModalContext);
 
-  const closeAllHandler = () => setCallerAction("close");
   const openCatalogHandler = () => setCallerAction("Каталог");
   const openShoppingCartHandler = () => setCallerAction("Корзина");
   const openSearchHandler = () => setCallerAction("Поиск");
@@ -26,7 +26,7 @@ export const TabletMenu = () => {
       <ul className="tablet-menu__list">
         <li className="tablet-menu__list-item">
           <NavLink className="item-link" to="#">
-            <CustomButton ghost onClick={closeAllHandler}>
+            <CustomButton ghost onClick={setCloseMobileModal}>
               <HomeIcon />
               <span className="item-title">Главная</span>
             </CustomButton>

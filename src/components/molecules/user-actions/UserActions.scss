@@ -1,8 +1,8 @@
 @import "src/scss/base";
 
 .user-actions {
-  flex: 0 0 50%;
-  margin: 0 auto;
+  flex: 0 1 50%;
+  padding: rem(10px);
   display: flex;
   justify-content: flex-end;
   align-items: center;
