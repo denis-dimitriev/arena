@@ -10,10 +10,9 @@ import { MobileModalContext } from "../context/mobile-modal";
 import { CatalogContext } from "../context/catalog.context";
 
 const App = () => {
-  const { openCatalog, setOpenCatalog } = useContext(CatalogContext);
+  const { setCloseCatalogHandler } = useContext(CatalogContext);
   const { renderingMobileMenu } = useContext(MobileModalContext);
 
-  const setCloseCatalogHandler = () => openCatalog && setOpenCatalog(false);
   return (
     <div className="app" onClick={setCloseCatalogHandler}>
       <Header />
