@@ -1,6 +1,6 @@
 import "./MobileModal.scss";
 
-import { CustomButton } from "../../atoms/ui/custom-button/CustomButton";
+import { ButtonGhost } from "../../atoms/ui/button-ghost/ButtonGhost";
 import { CloseIcon } from "../../../assets";
 import React, { ReactNode, useContext } from "react";
 import { MobileModalContext } from "../../../context/mobile-modal";
@@ -25,9 +25,9 @@ export const MobileModal: React.FC<MobileModalProps> = ({
       <div className="mobile-modal__container">
         <div className="container-top">
           <h2 className="title">{title}</h2>
-          <CustomButton ghost onClick={closeMenuHandler}>
+          <ButtonGhost onClick={closeMenuHandler}>
             <CloseIcon />
-          </CustomButton>
+          </ButtonGhost>
         </div>
         <div className="container-body">{children}</div>
       </div>

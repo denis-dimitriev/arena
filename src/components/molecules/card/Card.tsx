@@ -12,7 +12,7 @@ interface CardProps {
 
 export const Card: React.FC<CardProps> = ({ id, title, img, price }) => {
   return (
-    <div key={id} className="card">
+    <div className="card">
       <Link to="#">
         <img src={img} alt={title} />
         <div className="card-info">

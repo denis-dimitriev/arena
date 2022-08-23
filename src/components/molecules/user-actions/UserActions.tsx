@@ -2,25 +2,25 @@ import "./UserActions.scss";
 
 import { FavoriteIcon, ShoppingCartIcon, WatchedIcon } from "../../../assets";
 import { NavLink } from "react-router-dom";
-import { IconBadge } from "../../atoms/ui/icon-badge/IconBadge";
+import { ButtonBadge } from "../../atoms/ui/button-badge/ButtonBadge";
 
 export const UserActions = () => {
   return (
     <div className="user-actions">
       <NavLink className="user-actions__link" to="#">
-        <IconBadge>
+        <ButtonBadge>
           <WatchedIcon />
-        </IconBadge>
+        </ButtonBadge>
       </NavLink>
       <NavLink className="user-actions__link" to="#">
-        <IconBadge>
+        <ButtonBadge>
           <FavoriteIcon />
-        </IconBadge>
+        </ButtonBadge>
       </NavLink>
       <NavLink className="user-actions__link cart-hidden" to="#">
-        <IconBadge>
+        <ButtonBadge>
           <ShoppingCartIcon />
-        </IconBadge>
+        </ButtonBadge>
       </NavLink>
     </div>
   );

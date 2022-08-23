@@ -1,0 +1,15 @@
+@import "src/scss/base";
+
+.button-form {
+  display: inline-block;
+  background-color: $dark-blue;
+  padding: rem(14px) rem(16px);
+  color: white;
+  border-radius: rem(4px);
+  cursor: pointer;
+  transition: background-color 0.1s ease-in;
+
+  &:hover {
+    background-color: $blue;
+  }
+}

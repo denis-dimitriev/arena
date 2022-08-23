@@ -140,7 +140,9 @@ export const Carousel = () => {
       >
         {carousel.map((card) => {
           const { id, title, img, price } = card;
-          return <Card id={id} title={title} img={img} price={price} />;
+          return (
+            <Card key={id} id={id} title={title} img={img} price={price} />
+          );
         })}
       </div>
       <div className="carousel__actions">

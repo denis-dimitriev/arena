@@ -3,8 +3,10 @@ import "./HeaderTop.scss";
 import { Logo } from "../../atoms/ui/logo/Logo";
 import { Search } from "../../molecules/search/Search";
 import { UserActions } from "../../molecules/user-actions/UserActions";
-import { CustomButton } from "../../atoms/ui/custom-button/CustomButton";
+import { ButtonGhost } from "../../atoms/ui/button-ghost/ButtonGhost";
 import { UserIcon } from "../../../assets";
+import { NavLink } from "react-router-dom";
+import { ButtonForm } from "../../atoms/ui/button-form/ButtonForm";
 
 export const HeaderTop = () => {
   const login = false;
@@ -21,11 +23,13 @@ export const HeaderTop = () => {
             <UserActions />
           </div>
           {login ? (
-            <CustomButton ghost>
+            <ButtonGhost>
               <UserIcon />
-            </CustomButton>
+            </ButtonGhost>
           ) : (
-            <CustomButton>Войти</CustomButton>
+            <NavLink to="/authentication">
+              <ButtonForm>Войти</ButtonForm>
+            </NavLink>
           )}
         </div>
       </div>

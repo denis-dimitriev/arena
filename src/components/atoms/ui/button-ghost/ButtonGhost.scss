@@ -1,0 +1,17 @@
+@import "src/scss/base";
+
+.button-ghost {
+  display: block;
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+  text-align: center;
+  transition: all 80ms ease-in-out;
+  user-select: none;
+  position: relative;
+
+  svg {
+    width: rem(25px);
+    height: rem(25px);
+  }
+}

@@ -8,7 +8,7 @@ import {
   ShoppingCartIcon,
 } from "../../../../assets";
 import { NavLink } from "react-router-dom";
-import { CustomButton } from "../../../atoms/ui/custom-button/CustomButton";
+import { ButtonGhost } from "../../../atoms/ui/button-ghost/ButtonGhost";
 import React, { useContext } from "react";
 import { MobileModalContext } from "../../../../context/mobile-modal";
 
@@ -26,35 +26,35 @@ export const TabletMenu = () => {
       <ul className="tablet-menu__list">
         <li className="tablet-menu__list-item">
           <NavLink className="item-link" to="#">
-            <CustomButton ghost onClick={setCloseMobileModal}>
+            <ButtonGhost onClick={setCloseMobileModal}>
               <HomeIcon />
               <span className="item-title">Главная</span>
-            </CustomButton>
+            </ButtonGhost>
           </NavLink>
         </li>
         <li className="tablet-menu__list-item">
-          <CustomButton ghost onClick={openCatalogHandler}>
+          <ButtonGhost onClick={openCatalogHandler}>
             <MenuIcon />
             <span className="item-title">Каталог</span>
-          </CustomButton>
+          </ButtonGhost>
         </li>
         <li className="tablet-menu__list-item">
-          <CustomButton ghost onClick={openShoppingCartHandler}>
+          <ButtonGhost onClick={openShoppingCartHandler}>
             <ShoppingCartIcon />
             <span className="item-title">Корзина</span>
-          </CustomButton>
+          </ButtonGhost>
         </li>
         <li className="tablet-menu__list-item tablet-menu__list-item_search-hidden">
-          <CustomButton ghost onClick={openSearchHandler}>
+          <ButtonGhost onClick={openSearchHandler}>
             <SearchIcon />
             <span className="item-title">Поиск</span>
-          </CustomButton>
+          </ButtonGhost>
         </li>
         <li className="tablet-menu__list-item">
-          <CustomButton ghost onClick={openMoreCartHandler}>
+          <ButtonGhost onClick={openMoreCartHandler}>
             <MoreIcon />
             <span className="item-title">Ещё</span>
-          </CustomButton>
+          </ButtonGhost>
         </li>
       </ul>
     </div>

@@ -8,8 +8,10 @@ import { Carousel } from "./organisms/carousel/Carousel";
 import { useContext } from "react";
 import { MobileModalContext } from "../context/mobile-modal";
 import { CatalogContext } from "../context/catalog.context";
-import { IconBadge } from "./atoms/ui/icon-badge/IconBadge";
+import { ButtonBadge } from "./atoms/ui/button-badge/ButtonBadge";
 import { ShoppingCartIcon } from "../assets";
+import Homepage from "../pages/homepage/Homepage";
+import Authentication from "../pages/authentication/Authentication";
 
 const App = () => {
   const { setCloseCatalogHandler } = useContext(CatalogContext);
@@ -19,10 +21,10 @@ const App = () => {
     <div className="app" onClick={setCloseCatalogHandler}>
       <Header />
       <Layout>
-        <div className="app__container">
-          <Carousel />
-          <hr />
-        </div>
+        <Routes>
+          <Route index element={<Homepage />} />
+          <Route path="/authentication" element={<Authentication />} />
+        </Routes>
         {renderingMobileMenu}
         <TabletMenu />
       </Layout>

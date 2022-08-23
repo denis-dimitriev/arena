@@ -1,4 +1,4 @@
-import "./IconBadge.scss";
+import "./ButtonBadge.scss";
 
 import React, { HTMLProps, ReactNode } from "react";
 
@@ -7,7 +7,7 @@ interface IconBadgeProps extends HTMLProps<HTMLButtonElement> {
   counter?: number;
 }
 
-export const IconBadge: React.FC<IconBadgeProps> = ({
+export const ButtonBadge: React.FC<IconBadgeProps> = ({
   children,
   counter = 0,
   onClick,
