@@ -17,7 +17,9 @@ export const HeaderTop = () => {
           <Search />
         </div>
         <div className="top-header__user-actions">
-          <UserActions />
+          <div className="top-header__user-actions top-header__user-actions_close">
+            <UserActions />
+          </div>
           {login ? (
             <CustomButton ghost>
               <UserIcon />

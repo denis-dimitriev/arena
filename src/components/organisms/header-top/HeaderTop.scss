@@ -5,8 +5,8 @@
   padding: rem(10px) 0;
 
   &__container {
-    display: grid;
-    grid-template-columns: 25% 50% 25%;
+    display: grid;;
+    grid-template-columns: minmax(25%, 315px) 50% 25%;
     min-height: 60px;
     align-items: center;
     justify-content: space-between;
@@ -26,10 +26,17 @@
 @media (max-width: $medium-tablet) {
   .top-header {
     &__container {
-      grid-template-columns: minmax(25%, 315px) minmax(25%, 315px)
+      grid-template-columns: 1fr  1fr
     }
-
     &__search {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .top-header {
+    &__user-actions_close {
       display: none;
     }
   }

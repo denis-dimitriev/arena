@@ -8,6 +8,8 @@ import { Carousel } from "./organisms/carousel/Carousel";
 import { useContext } from "react";
 import { MobileModalContext } from "../context/mobile-modal";
 import { CatalogContext } from "../context/catalog.context";
+import { IconBadge } from "./atoms/ui/icon-badge/IconBadge";
+import { ShoppingCartIcon } from "../assets";
 
 const App = () => {
   const { setCloseCatalogHandler } = useContext(CatalogContext);
@@ -19,6 +21,7 @@ const App = () => {
       <Layout>
         <div className="app__container">
           <Carousel />
+          <hr />
         </div>
         {renderingMobileMenu}
         <TabletMenu />

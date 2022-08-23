@@ -1,0 +1,29 @@
+@import "src/scss/base";
+
+.icon-badge {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  padding: rem(10px);
+  position: relative;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+
+  &__counter {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    color: white;
+    text-align: center;
+    background-color: $dark-blue;
+    padding: rem(4px) rem(6px);
+    font-size: rem(12px);
+    font-weight: 500;
+    border-radius: 50%;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}

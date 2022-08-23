@@ -1,13 +1,19 @@
 @import "src/scss/base";
 
 .user-actions {
-  flex: 0 1 50%;
-  padding: rem(10px);
+  flex: 0 0 50%;
+  max-height: 40px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  padding: 0 rem(10px);
+
   &__link {
-    padding: 0 7%;
+    padding: 0 rem(12px) 0 0;
+
+    svg {
+      width: rem(24px);
+    }
   }
 }
 
@@ -16,11 +22,5 @@
     &__link.cart-hidden {
       display: none;
     }
-  }
-}
-
-@media screen and (max-width: $mobile){
-  .user-actions {
-      display: none;
   }
 }

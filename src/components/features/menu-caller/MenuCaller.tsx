@@ -4,6 +4,8 @@ import { Search } from "../../molecules/search/Search";
 import { useContext } from "react";
 import { CatalogContext } from "../../../context/catalog.context";
 import { MobileModalContext } from "../../../context/mobile-modal";
+import { NavMenu } from "../../molecules/nav-menu/NavMenu";
+import { UserActions } from "../../molecules/user-actions/UserActions";
 
 export type ActionCaller = "Каталог" | "Корзина" | "Поиск" | "Еще" | "close";
 
@@ -45,7 +47,8 @@ export const MenuCaller = (action: ActionCaller) => {
       setOpenCatalog(false);
       return (
         <MobileModal title={action}>
-          <h1>More</h1>
+          <UserActions />
+          <NavMenu />
         </MobileModal>
       );
 

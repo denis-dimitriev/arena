@@ -15,11 +15,12 @@ $orange: #F37748;
 $blue: #4878A6;
 $light-blue: #EDF2F6;
 $light-blue-hover: #DAE4ED;
+$divider-color: #C8CACB;
 
 
 $font-size: rem(16);
 
-$min-width: 320px;
+$min-width: em(320px);
 $max-width: 1920px;
 $container-width: 1300px;
 $container-padding: 20px;
@@ -53,5 +54,4 @@ $small-mobile: 480px;
   max-width: $max-width-container;
   min-width: $min-width;
   padding: 0 $container-padding / 2;
-  box-sizing: border-box;
 }
