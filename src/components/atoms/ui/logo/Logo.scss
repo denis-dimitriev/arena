@@ -2,14 +2,7 @@
 
 .logo {
     max-width: 315px;
-    font-weight: 700;
-    font-size: em(32px);
-    line-height: 43px;
-    color: #0E1821;
-}
-
-@media screen and (max-width: $mobile){
-    .logo {
-
-    }
+    font-family: 'QuarterBack', serif;
+    font-size: rem(32px);
+    color: $main-black;
 }
