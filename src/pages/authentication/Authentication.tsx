@@ -1,5 +1,6 @@
 import "./Authentication.scss";
-import { CloseIcon } from "../../assets";
+
+import { CloseIcon, GoogleIcon } from "../../assets";
 import { ButtonGhost } from "../../components/atoms/ui/button-ghost/ButtonGhost";
 import React, { ChangeEvent, useState } from "react";
 import { ButtonForm } from "../../components/atoms/ui/button-form/ButtonForm";
@@ -19,7 +20,7 @@ const Authentication = () => {
     <div className="auth">
       <div className="auth__pop-up">
         {signup ? (
-          <form className="auth__sign-up-form form" onSubmit={onSubmit}>
+          <form className="auth__form form" onSubmit={onSubmit}>
             <div className="form__header">
               <h3 className="form__title">Регистрация</h3>
               <NavLink to="/">
@@ -43,7 +44,7 @@ const Authentication = () => {
             <div className="form__bottom">
               <ButtonForm>Зарегистрироваться</ButtonForm>
               <ButtonGhost
-                className="form__bottom__button"
+                className="form__sign-button"
                 onClick={getUserSignInHandler}
               >
                 Войти
@@ -51,7 +52,7 @@ const Authentication = () => {
             </div>
           </form>
         ) : (
-          <form className="auth__sign-in-form form" onSubmit={onSubmit}>
+          <form className="auth__form form" onSubmit={onSubmit}>
             <div className="form__header">
               <h3 className="form__title">Вход</h3>
               <NavLink to="/">
@@ -70,8 +71,12 @@ const Authentication = () => {
             </div>
             <div className="form__bottom">
               <ButtonForm>Войти</ButtonForm>
+              <ButtonForm className="form__google-button">
+                <GoogleIcon />
+                Войти через Google
+              </ButtonForm>
               <ButtonGhost
-                className="form__bottom__button"
+                className="form__sign-button"
                 onClick={getUserSignUpHandler}
               >
                 Зарегистрироваться

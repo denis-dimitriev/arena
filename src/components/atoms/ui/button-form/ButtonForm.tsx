@@ -8,10 +8,11 @@ interface ButtonFormProps extends HTMLProps<HTMLButtonElement> {
 
 export const ButtonForm: React.FC<ButtonFormProps> = ({
   children,
+  className,
   onClick,
 }) => {
   return (
-    <button type="submit" className="button-form" onClick={onClick}>
+    <button type="submit" className={`${className} button-form`} onClick={onClick}>
       {children}
     </button>
   );

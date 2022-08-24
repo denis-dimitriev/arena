@@ -15,22 +15,21 @@
   z-index: 9999;
 
   &__pop-up {
-    min-width: rem(360px);
+    min-width: rem(370px);
     background-color: white;
     padding: rem(10px);
     border-radius: rem(8px);
+
+    @media (max-width: $mobile) {
+      min-width: rem(320px);
+    }
   }
-
-  &__sign-in-form {}
-
-  &__sign-up-form {}
 
   .form {
     display: flex;
     flex-direction: column;
     background-color: $light-blue;
     padding: rem(10px);
-
 
     &__header {
       height: rem(50px);
@@ -89,14 +88,29 @@
     &__bottom {
       display: flex;
       flex-direction: column;
-      height: rem(80px);
-      row-gap: 20px;
+      gap: 20PX;
+    }
 
-      &__button {
-        font-weight: 400;
-        font-size: rem(16px);
-        color: $blue;
+    &__google-button {
+      background-color: transparent;
+      color: $main-black;
+      border: 1px solid $dark-blue;
+      display: flex;
+      font-weight: 600;
+      align-items: center;
+      justify-content: center;
+      column-gap: rem(10px);
+      padding: rem(12px) 0;
+
+      &:hover {
+        background-color: $light-gray-color;
       }
+    }
+
+    &__sign-button {
+      font-weight: 400;
+      font-size: rem(16px);
+      color: $blue;
     }
   }
 

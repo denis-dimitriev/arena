@@ -13,6 +13,7 @@ import { ReactComponent as UserIcon } from "./svg-icons/user.svg";
 import { ReactComponent as HomeIcon } from "./svg-icons/home.svg";
 import { ReactComponent as MoreIcon } from "./svg-icons/more.svg";
 import { ReactComponent as CloseIcon } from "./svg-icons/close.svg";
+import { ReactComponent as GoogleIcon } from "./svg-icons/social/google.svg";
 
 export {
   SearchIcon,
@@ -30,4 +31,5 @@ export {
   HomeIcon,
   MoreIcon,
   CloseIcon,
+  GoogleIcon
 };

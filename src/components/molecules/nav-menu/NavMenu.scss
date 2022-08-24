@@ -29,7 +29,7 @@
       align-items: flex-start;
     }
     &__list-item {
-      border-bottom: 1px solid $divider-color;
+      border-bottom: 1px solid $light-gray-color;
       .item-link:hover {
         color: revert;
       }
