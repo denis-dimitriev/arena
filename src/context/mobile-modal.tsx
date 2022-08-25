@@ -14,7 +14,7 @@ type MobileModalType = {
   openMobileModal: boolean;
   setOpenMobileModal: Dispatch<SetStateAction<boolean>>;
   setCallerAction: Dispatch<SetStateAction<ActionCaller>>;
-  renderingMobileMenu: JSX.Element | undefined;
+  renderingMobileMenu: ReactNode;
   setCloseMobileModal: () => void;
 };
 
@@ -22,7 +22,7 @@ export const MobileModalContext = createContext<MobileModalType>({
   openMobileModal: false,
   setOpenMobileModal: () => {},
   setCallerAction: () => {},
-  renderingMobileMenu: undefined,
+  renderingMobileMenu: (<></>),
   setCloseMobileModal: () => {},
 });
 
@@ -31,8 +31,8 @@ interface IMobileModal {
 }
 
 export const MobileModalProvider: React.FC<IMobileModal> = ({ children }) => {
-  const [openMobileModal, setOpenMobileModal] = useState<boolean>(false);
   const [callerAction, setCallerAction] = useState<ActionCaller>("close");
+  const [openMobileModal, setOpenMobileModal] = useState<boolean>(false);
 
   const setMobileMenuHandler = () => {
     switch (callerAction) {
@@ -46,7 +46,7 @@ export const MobileModalProvider: React.FC<IMobileModal> = ({ children }) => {
         return MenuCaller(callerAction);
       case "close":
       default:
-        break;
+        return <></>
     }
   };
 

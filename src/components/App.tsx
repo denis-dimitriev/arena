@@ -10,8 +10,8 @@ import { MobileModalContext } from "../context/mobile-modal";
 import { CatalogContext } from "../context/catalog.context";
 import { ButtonBadge } from "./atoms/ui/button-badge/ButtonBadge";
 import { ShoppingCartIcon } from "../assets";
-import Homepage from "../pages/homepage/Homepage";
-import Authentication from "../pages/authentication/Authentication";
+import Homepage from "./pages/homepage/Homepage";
+import Authentication from "./pages/authentication/Authentication";
 
 const App = () => {
   const { setCloseCatalogHandler } = useContext(CatalogContext);

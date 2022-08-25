@@ -1,6 +1,6 @@
 import "./Homepage.scss";
 
-import { Carousel } from "../../components/organisms/carousel/Carousel";
+import { Carousel } from "../../organisms/carousel/Carousel";
 
 const Homepage = () => {
   return (

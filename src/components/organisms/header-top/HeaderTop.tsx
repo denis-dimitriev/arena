@@ -7,9 +7,17 @@ import { ButtonGhost } from "../../atoms/ui/button-ghost/ButtonGhost";
 import { UserIcon } from "../../../assets";
 import { NavLink } from "react-router-dom";
 import { ButtonForm } from "../../atoms/ui/button-form/ButtonForm";
+import { UserContext } from "../../../context/user.context";
+import { useContext } from "react";
+import { signOutUser } from "../../../utils/firebase.auth";
 
 export const HeaderTop = () => {
-  const login = false;
+
+  const { currentUser } = useContext(UserContext)
+
+  const signOutHandler = async () => {
+    await signOutUser()
+  }
 
   return (
     <div className="top-header">
@@ -22,8 +30,8 @@ export const HeaderTop = () => {
           <div className="top-header__user-actions top-header__user-actions_close">
             <UserActions />
           </div>
-          {login ? (
-            <ButtonGhost>
+          {currentUser ? (
+            <ButtonGhost onClick={signOutHandler}>
               <UserIcon />
             </ButtonGhost>
           ) : (
