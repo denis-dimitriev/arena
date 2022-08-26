@@ -3,6 +3,7 @@
 .top-header {
   background-color: white;
   padding: rem(10px) 0;
+  position: relative;
 
   &__container {
     display: grid;;
@@ -21,6 +22,41 @@
     align-items: center;
     justify-content: flex-end;
   }
+
+  .user-panel {
+    display: none;
+    background-color: white;
+    position: absolute;
+    top: rem(80px);
+    z-index: 99;
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      width: rem(230px)
+    }
+
+    &__item {
+      padding: 15px 20px;
+      font-size: rem(16px);
+
+      &:hover {
+        background-color: $light-blue
+      }
+    }
+
+    &__button {
+      width: 100%;
+      color: $red;
+      font-size: inherit;
+      text-align: left;
+    }
+
+    &_active {
+      display: block;
+    }
+  }
+
 }
 
 @media (max-width: $medium-tablet) {
