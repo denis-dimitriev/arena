@@ -1,0 +1,43 @@
+@import "src/scss/base";
+
+.user-page {
+  height: 100%;
+
+  .grid {
+    display: grid;
+    grid-template-columns: minmax(25%, 315px) 75%;
+    gap: rem(20px);
+  }
+
+  &__category {
+    height: auto;
+  }
+
+  .category {
+    &__title {
+      font-weight: 700;
+      font-size: rem(32px);
+      margin-bottom: rem(10px);
+    }
+
+    &__list {}
+
+    &__list-item {
+      padding: rem(15px) rem(20px);
+      font-size: rem(16px);
+      .item-link {
+        font-weight: 500;
+        line-height: 19px;
+      }
+
+      .item-button {
+        font-size: inherit;
+        color: $red;
+      }
+    }
+  }
+
+  &__info {
+    height: auto;
+  }
+}

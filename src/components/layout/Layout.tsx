@@ -1,15 +1,13 @@
-import React, { ReactNode } from "react";
-
 import "./Layout.scss";
 
-interface LayoutProps {
-  children: ReactNode;
-}
+import { Outlet } from "react-router-dom";
 
-export const Layout: React.FC<LayoutProps> = ({ children }) => {
+export const Layout = () => {
   return (
     <div className="wrapper">
-      <main className="main">{children}</main>
+      <main className="main">
+        <Outlet />
+      </main>
     </div>
   );
 };

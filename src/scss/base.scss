@@ -1,6 +1,6 @@
 @use 'sass:math';
 
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
 
 
 /* variables */
@@ -54,4 +54,10 @@ $small-mobile: 480px;
   max-width: $max-width-container;
   min-width: $min-width;
   padding: 0 $container-padding / 2;
+}
+
+[class*="__title"] {
+  font-weight: 700;
+  font-size: rem(36px);
+  line-height: 130%;
 }

@@ -15,6 +15,11 @@
     display: flex;
     transform: translateX(0);
     transition: transform 0.3s linear;
+
+    &-item {
+      min-width: rem(320px);
+    }
+
   }
 
   &__actions {

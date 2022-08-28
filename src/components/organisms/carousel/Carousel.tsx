@@ -3,15 +3,16 @@ import "./Carousel.scss";
 import { ArrowLeftIcon, ArrowRightIcon } from "../../../assets";
 import { useEffect, useState } from "react";
 import { Card } from "../../molecules/card/Card";
+import { NavLink } from "react-router-dom";
 
-interface Icarousel {
+export interface Icarousel {
   id: number;
   title: string;
   img: string;
   price: number;
 }
 
-const newAdsAdded: Icarousel[] = [
+export const newAdsAdded: Icarousel[] = [
   {
     id: 1,
     img: "https://i.simpalsmedia.com/999.md/BoardImages/320x240/259474eb6cb96fee4eed034bc0aac01d.jpg",
@@ -132,19 +133,20 @@ export const Carousel = () => {
 
   return (
     <div className="carousel">
-      <div
+      <ul
         className="carousel__list"
         style={{
           transform: `translateX(${positionX}px)`,
         }}
       >
-        {carousel.map((card) => {
-          const { id, title, img, price } = card;
-          return (
-            <Card key={id} id={id} title={title} img={img} price={price} />
-          );
-        })}
-      </div>
+        {carousel.map((card) => (
+          <li key={card.id} className="carousel__list-item">
+            <NavLink to="#">
+              <Card card={card} />
+            </NavLink>
+          </li>
+        ))}
+      </ul>
       <div className="carousel__actions">
         <button className="action-btn" onClick={moveLeftHandler}>
           <ArrowLeftIcon />

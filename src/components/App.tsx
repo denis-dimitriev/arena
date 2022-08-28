@@ -9,6 +9,7 @@ import { MobileModalContext } from "../context/mobile-modal";
 import { CatalogContext } from "../context/catalog.context";
 import Homepage from "./pages/homepage/Homepage";
 import Authentication from "./pages/authentication/Authentication";
+import UserPage from "./pages/user-page/UserPage";
 
 const App = () => {
   const { setCloseCatalogHandler } = useContext(CatalogContext);
@@ -17,14 +18,15 @@ const App = () => {
   return (
     <div className="app" onClick={setCloseCatalogHandler}>
       <Header />
-      <Layout>
-        <Routes>
+      <Routes>
+        <Route path="/*" element={<Layout />}>
           <Route index element={<Homepage />} />
-          <Route path="/authentication" element={<Authentication />} />
-        </Routes>
-        {renderingMobileMenu}
-        <TabletMenu />
-      </Layout>
+          <Route path="authentication" element={<Authentication />} />
+          <Route path="user-page/*" element={<UserPage />} />
+        </Route>
+      </Routes>
+      {renderingMobileMenu}
+      <TabletMenu />
     </div>
   );
 };

@@ -16,7 +16,7 @@ export const HeaderTop = () => {
 
   const { currentUser } = useContext(UserContext);
 
-  const openUserPanelHandler = () =>
+  const onToggleUserPanelHandler = () =>
     setOpenUserPanel((prevState) => !prevState);
 
   const signOutHandler = async () => {
@@ -35,7 +35,7 @@ export const HeaderTop = () => {
             <UserActions />
           </div>
           {currentUser ? (
-            <ButtonGhost onClick={openUserPanelHandler}>
+            <ButtonGhost onClick={onToggleUserPanelHandler}>
               <UserIcon />
             </ButtonGhost>
           ) : (
@@ -49,7 +49,9 @@ export const HeaderTop = () => {
           >
             <ul className="user-panel__list">
               <li className="user-panel__item">
-                <NavLink to="#">Общие сведения</NavLink>
+                <NavLink to="user-page" onClick={onToggleUserPanelHandler}>
+                  Общие сведения
+                </NavLink>
               </li>
               <li className="user-panel__item">
                 <ButtonGhost

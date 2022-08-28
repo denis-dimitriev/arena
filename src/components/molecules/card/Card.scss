@@ -1,14 +1,19 @@
 @import "src/scss/base";
 
 .card {
-  min-width: rem(320px);
+  min-width: rem(310px);
   padding: rem(10px);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  transition: opacity 100ms ease-in-out;
+
+  &:hover {
+    opacity: 0.7;
+  }
 
   img {
-    max-width: 100%;
+    width: 100%;
     border-radius: rem(4px);
     object-fit: cover;
     object-position: center;
@@ -16,16 +21,15 @@
 
   .card-info {
     .card-title {
-      font-size: rem(16px);
-      font-weight: 500;
-      padding: rem(5px) 0;
+      font-size: rem(14px);
+      font-weight: 400;
+      padding: rem(3px) 0;
       color: $dark;
     }
 
     .card-price {
-      font-size: rem(15px);
-      font-weight: 700;
-      padding: rem(5px) 0;
+      font-size: rem(14px);
+      font-weight: 500;
       color: $red;
     }
   }

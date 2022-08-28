@@ -22,7 +22,7 @@ export const MobileModalContext = createContext<MobileModalType>({
   openMobileModal: false,
   setOpenMobileModal: () => {},
   setCallerAction: () => {},
-  renderingMobileMenu: (<></>),
+  renderingMobileMenu: <></>,
   setCloseMobileModal: () => {},
 });
 
@@ -31,8 +31,8 @@ interface IMobileModal {
 }
 
 export const MobileModalProvider: React.FC<IMobileModal> = ({ children }) => {
-  const [callerAction, setCallerAction] = useState<ActionCaller>("close");
   const [openMobileModal, setOpenMobileModal] = useState<boolean>(false);
+  const [callerAction, setCallerAction] = useState<ActionCaller>("close");
 
   const setMobileMenuHandler = () => {
     switch (callerAction) {
@@ -46,12 +46,12 @@ export const MobileModalProvider: React.FC<IMobileModal> = ({ children }) => {
         return MenuCaller(callerAction);
       case "close":
       default:
-        return <></>
+        return <></>;
     }
   };
 
   const setCloseMobileModal = () => {
-    const timeout = setTimeout(() => setCallerAction("close"), 300);
+    const timeout = setTimeout(() => setCallerAction("close"), 100);
     return () => clearTimeout(timeout);
   };
 
