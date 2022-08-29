@@ -16,8 +16,8 @@ export const HeaderMenu = () => {
         <div className="menu-header__nav-menu">
           <NavMenu />
         </div>
+        <CatalogMenu />
       </div>
-      <CatalogMenu />
     </div>
   );
 };

@@ -3,7 +3,6 @@ import { CatalogMenu } from "../../molecules/catalog-menu/CatalogMenu";
 import { Search } from "../../molecules/search/Search";
 import { useContext } from "react";
 import { CatalogContext } from "../../../context/catalog.context";
-import { MobileModalContext } from "../../../context/mobile-modal";
 import { NavMenu } from "../../molecules/nav-menu/NavMenu";
 import { UserActions } from "../../molecules/user-actions/UserActions";
 
@@ -11,11 +10,9 @@ export type ActionCaller = "Каталог" | "Корзина" | "Поиск" | 
 
 export const MenuCaller = (action: ActionCaller) => {
   const { setOpenCatalog } = useContext(CatalogContext);
-  const { setOpenMobileModal } = useContext(MobileModalContext);
 
   switch (action) {
     case "Каталог": {
-      setOpenMobileModal(true);
       setOpenCatalog(true);
       return (
         <MobileModal title={action}>
@@ -25,7 +22,6 @@ export const MenuCaller = (action: ActionCaller) => {
     }
 
     case "Корзина":
-      setOpenMobileModal(true);
       setOpenCatalog(false);
       return (
         <MobileModal title={action}>
@@ -34,7 +30,6 @@ export const MenuCaller = (action: ActionCaller) => {
       );
 
     case "Поиск":
-      setOpenMobileModal(true);
       setOpenCatalog(false);
       return (
         <MobileModal title={action}>
@@ -43,7 +38,6 @@ export const MenuCaller = (action: ActionCaller) => {
       );
 
     case "Еще":
-      setOpenMobileModal(true);
       setOpenCatalog(false);
       return (
         <MobileModal title={action}>
@@ -54,7 +48,6 @@ export const MenuCaller = (action: ActionCaller) => {
 
     case "close":
     default:
-      setOpenMobileModal(false);
       setOpenCatalog(false);
       break;
   }

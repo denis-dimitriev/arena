@@ -18,15 +18,15 @@ const App = () => {
   return (
     <div className="app" onClick={setCloseCatalogHandler}>
       <Header />
-      <Routes>
-        <Route path="/*" element={<Layout />}>
+      <Layout>
+        <Routes>
           <Route index element={<Homepage />} />
           <Route path="authentication" element={<Authentication />} />
           <Route path="user-page/*" element={<UserPage />} />
-        </Route>
-      </Routes>
-      {renderingMobileMenu}
-      <TabletMenu />
+        </Routes>
+        {renderingMobileMenu}
+        <TabletMenu />
+      </Layout>
     </div>
   );
 };

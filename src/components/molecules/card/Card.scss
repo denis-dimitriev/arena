@@ -7,10 +7,7 @@
   flex-direction: column;
   justify-content: flex-start;
   transition: opacity 100ms ease-in-out;
-
-  &:hover {
-    opacity: 0.7;
-  }
+  position: relative;
 
   img {
     width: 100%;
@@ -18,7 +15,6 @@
     object-fit: cover;
     object-position: center;
   }
-
   .card-info {
     .card-title {
       font-size: rem(14px);
@@ -33,4 +29,28 @@
       color: $red;
     }
   }
+
+  &__favorites {
+    width: rem(100px);
+    height: rem(100px);
+    visibility: hidden;
+    transform: rotate(45deg);
+    background-color: white;
+    position: absolute;
+    top: rem(-40px);
+    right: rem(-40px);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    svg {
+      width: rem(20px);
+      transform: rotate(-45deg);
+    }
+  }
+
+  &:hover &__favorites_active {
+    visibility: visible;
+  }
 }
+

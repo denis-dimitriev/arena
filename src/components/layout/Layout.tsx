@@ -1,12 +1,17 @@
 import "./Layout.scss";
 
 import { Outlet } from "react-router-dom";
+import React, { ReactNode } from "react";
 
-export const Layout = () => {
+interface LayoutProps {
+  children: ReactNode;
+}
+
+export const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="wrapper">
       <main className="main">
-        <Outlet />
+        <div className="main__container">{children}</div>
       </main>
     </div>
   );

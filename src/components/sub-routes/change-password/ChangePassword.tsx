@@ -7,9 +7,13 @@ export const ChangePassword = () => {
       <label htmlFor="old">Введите старый пароль</label>
       <input id="old" type="password" className="change-password__input" />
       <label htmlFor="new">Введите новый пароль</label>
-      <input id="old" type="password" className="change-password__input" />
+      <input id="new" type="password" className="change-password__input" />
       <label htmlFor="new-confirm">Повторите новый пароль</label>
-      <input id="old" type="password" className="change-password__input" />
+      <input
+        id="new-confirm"
+        type="password"
+        className="change-password__input"
+      />
       <ButtonForm>Сохранить изменения</ButtonForm>
     </form>
   );

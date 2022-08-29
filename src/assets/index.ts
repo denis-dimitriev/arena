@@ -1,5 +1,6 @@
 import { ReactComponent as SearchIcon } from "./svg-icons/search.svg";
 import { ReactComponent as FavoriteIcon } from "./svg-icons/favorite.svg";
+import { ReactComponent as FavoriteRedIcon } from "./svg-icons/favorite-red.svg";
 import { ReactComponent as ShoppingCartIcon } from "./svg-icons/shopping-cart.svg";
 import { ReactComponent as WatchedIcon } from "./svg-icons/eye.svg";
 import { ReactComponent as MenuIcon } from "./svg-icons/menu.svg";
@@ -18,6 +19,7 @@ import { ReactComponent as GoogleIcon } from "./svg-icons/social/google.svg";
 export {
   SearchIcon,
   FavoriteIcon,
+  FavoriteRedIcon,
   ShoppingCartIcon,
   WatchedIcon,
   MenuIcon,
@@ -31,5 +33,5 @@ export {
   HomeIcon,
   MoreIcon,
   CloseIcon,
-  GoogleIcon
+  GoogleIcon,
 };

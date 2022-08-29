@@ -11,16 +11,12 @@ import {
 } from "../components/features/menu-caller/MenuCaller";
 
 type MobileModalType = {
-  openMobileModal: boolean;
-  setOpenMobileModal: Dispatch<SetStateAction<boolean>>;
   setCallerAction: Dispatch<SetStateAction<ActionCaller>>;
   renderingMobileMenu: ReactNode;
   setCloseMobileModal: () => void;
 };
 
 export const MobileModalContext = createContext<MobileModalType>({
-  openMobileModal: false,
-  setOpenMobileModal: () => {},
   setCallerAction: () => {},
   renderingMobileMenu: <></>,
   setCloseMobileModal: () => {},
@@ -31,7 +27,6 @@ interface IMobileModal {
 }
 
 export const MobileModalProvider: React.FC<IMobileModal> = ({ children }) => {
-  const [openMobileModal, setOpenMobileModal] = useState<boolean>(false);
   const [callerAction, setCallerAction] = useState<ActionCaller>("close");
 
   const setMobileMenuHandler = () => {
@@ -55,11 +50,9 @@ export const MobileModalProvider: React.FC<IMobileModal> = ({ children }) => {
     return () => clearTimeout(timeout);
   };
 
-  const renderingMobileMenu = setMobileMenuHandler();
+  let renderingMobileMenu = setMobileMenuHandler();
 
   const valueContext = {
-    openMobileModal,
-    setOpenMobileModal,
     setCallerAction,
     renderingMobileMenu,
     setCloseMobileModal,

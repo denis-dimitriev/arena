@@ -18,6 +18,10 @@
 
     &-item {
       min-width: rem(320px);
+
+      &:hover {
+        opacity: 0.7;
+      }
     }
 
   }
