@@ -33,8 +33,6 @@ export const MobileModalProvider: React.FC<IMobileModal> = ({ children }) => {
     switch (callerAction) {
       case "Каталог":
         return MenuCaller(callerAction);
-      case "Корзина":
-        return MenuCaller(callerAction);
       case "Поиск":
         return MenuCaller(callerAction);
       case "Еще":
@@ -45,12 +43,12 @@ export const MobileModalProvider: React.FC<IMobileModal> = ({ children }) => {
     }
   };
 
+  let renderingMobileMenu = setMobileMenuHandler();
+
   const setCloseMobileModal = () => {
     const timeout = setTimeout(() => setCallerAction("close"), 100);
     return () => clearTimeout(timeout);
   };
-
-  let renderingMobileMenu = setMobileMenuHandler();
 
   const valueContext = {
     setCallerAction,

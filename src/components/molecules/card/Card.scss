@@ -9,6 +9,10 @@
   transition: opacity 100ms ease-in-out;
   position: relative;
 
+  &:hover {
+    opacity: 0.9;
+  }
+
   img {
     width: 100%;
     border-radius: rem(4px);
@@ -31,21 +35,22 @@
   }
 
   &__favorites {
-    width: rem(100px);
-    height: rem(100px);
+    width: rem(50px);
+    height: rem(50px);
+    border-radius: 50%;
     visibility: hidden;
-    transform: rotate(45deg);
     background-color: white;
     position: absolute;
-    top: rem(-40px);
-    right: rem(-40px);
+    top: rem(15px);
+    right: rem(15px);
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
+    transition: visibility 100ms ease-in-out;
 
     svg {
       width: rem(20px);
-      transform: rotate(-45deg);
+      margin-top: 5px;
     }
   }
 

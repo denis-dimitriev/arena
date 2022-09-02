@@ -6,7 +6,7 @@ import { CatalogContext } from "../../../context/catalog.context";
 import { NavMenu } from "../../molecules/nav-menu/NavMenu";
 import { UserActions } from "../../molecules/user-actions/UserActions";
 
-export type ActionCaller = "Каталог" | "Корзина" | "Поиск" | "Еще" | "close";
+export type ActionCaller = "Каталог" | "Поиск" | "Еще" | "close";
 
 export const MenuCaller = (action: ActionCaller) => {
   const { setOpenCatalog } = useContext(CatalogContext);
@@ -20,14 +20,6 @@ export const MenuCaller = (action: ActionCaller) => {
         </MobileModal>
       );
     }
-
-    case "Корзина":
-      setOpenCatalog(false);
-      return (
-        <MobileModal title={action}>
-          <h1>Shopping Cart</h1>
-        </MobileModal>
-      );
 
     case "Поиск":
       setOpenCatalog(false);
@@ -49,6 +41,6 @@ export const MenuCaller = (action: ActionCaller) => {
     case "close":
     default:
       setOpenCatalog(false);
-      break;
+      return <></>;
   }
 };

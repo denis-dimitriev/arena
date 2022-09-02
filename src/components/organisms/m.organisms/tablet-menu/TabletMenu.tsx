@@ -1,12 +1,6 @@
 import "./TabletMenu.scss";
 
-import {
-  HomeIcon,
-  MenuIcon,
-  MoreIcon,
-  SearchIcon,
-  ShoppingCartIcon,
-} from "../../../../assets";
+import { HomeIcon, MenuIcon, MoreIcon, SearchIcon } from "../../../../assets";
 import { NavLink } from "react-router-dom";
 import { ButtonGhost } from "../../../atoms/ui/button-ghost/ButtonGhost";
 import React, { useContext } from "react";
@@ -17,7 +11,6 @@ export const TabletMenu = () => {
     useContext(MobileModalContext);
 
   const openCatalogHandler = () => setCallerAction("Каталог");
-  const openShoppingCartHandler = () => setCallerAction("Корзина");
   const openSearchHandler = () => setCallerAction("Поиск");
   const openMoreCartHandler = () => setCallerAction("Еще");
 
@@ -36,12 +29,6 @@ export const TabletMenu = () => {
           <ButtonGhost onClick={openCatalogHandler}>
             <MenuIcon />
             <span className="item-title">Каталог</span>
-          </ButtonGhost>
-        </li>
-        <li className="tablet-menu__list-item">
-          <ButtonGhost onClick={openShoppingCartHandler}>
-            <ShoppingCartIcon />
-            <span className="item-title">Корзина</span>
           </ButtonGhost>
         </li>
         <li className="tablet-menu__list-item tablet-menu__list-item_search-hidden">

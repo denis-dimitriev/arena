@@ -8,16 +8,11 @@ import { UserIcon } from "../../../assets";
 import { NavLink } from "react-router-dom";
 import { ButtonForm } from "../../atoms/ui/button-form/ButtonForm";
 import { UserContext } from "../../../context/user.context";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { signOutUser } from "../../../utils/firebase.auth";
 
 export const HeaderTop = () => {
-  const [openUserPanel, setOpenUserPanel] = useState<boolean>(false);
-
   const { currentUser } = useContext(UserContext);
-
-  const onToggleUserPanelHandler = () =>
-    setOpenUserPanel((prevState) => !prevState);
 
   const signOutHandler = async () => {
     await signOutUser();
@@ -35,7 +30,7 @@ export const HeaderTop = () => {
             <UserActions />
           </div>
           {currentUser ? (
-            <ButtonGhost onClick={onToggleUserPanelHandler}>
+            <ButtonGhost className="current-user">
               <UserIcon />
             </ButtonGhost>
           ) : (
@@ -43,15 +38,13 @@ export const HeaderTop = () => {
               <ButtonForm>Войти</ButtonForm>
             </NavLink>
           )}
-          <div
-            className={`top-header__user-panel user-panel 
-          ${currentUser && openUserPanel && "user-panel_active"}`}
-          >
+          <div className="top-header__user-panel user-panel">
             <ul className="user-panel__list">
               <li className="user-panel__item">
-                <NavLink to="user-page" onClick={onToggleUserPanelHandler}>
-                  Общие сведения
-                </NavLink>
+                <NavLink to="user-page">Общие сведения</NavLink>
+              </li>
+              <li className="user-panel__item">
+                <NavLink to="add-new-advertisement">Подать объявление</NavLink>
               </li>
               <li className="user-panel__item">
                 <ButtonGhost

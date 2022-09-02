@@ -1,8 +1,11 @@
 @import "src/scss/base";
 
 .logo {
-    max-width: 315px;
+  max-width: 315px;
+
+  &__link {
     font-family: 'QuarterBack', serif;
     font-size: rem(32px);
     color: $main-black;
+  }
 }

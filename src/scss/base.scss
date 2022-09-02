@@ -55,9 +55,3 @@ $small-mobile: 480px;
   min-width: $min-width;
   padding: 0 $container-padding / 2;
 }
-
-[class*="__title"] {
-  font-weight: 700;
-  font-size: rem(36px);
-  line-height: 130%;
-}

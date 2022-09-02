@@ -10,6 +10,7 @@ import { CatalogContext } from "../context/catalog.context";
 import Homepage from "./pages/homepage/Homepage";
 import Authentication from "./pages/authentication/Authentication";
 import UserPage from "./pages/user-page/UserPage";
+import AddNewAd from "./pages/add-new-ad/AddNewAd";
 
 const App = () => {
   const { setCloseCatalogHandler } = useContext(CatalogContext);
@@ -23,6 +24,7 @@ const App = () => {
           <Route index element={<Homepage />} />
           <Route path="authentication" element={<Authentication />} />
           <Route path="user-page/*" element={<UserPage />} />
+          <Route path="add-new-advertisement" element={<AddNewAd />} />
         </Routes>
         {renderingMobileMenu}
         <TabletMenu />

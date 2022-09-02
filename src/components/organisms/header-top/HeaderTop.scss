@@ -3,7 +3,6 @@
 .top-header {
   background-color: white;
   padding: rem(10px) 0;
-  position: relative;
 
   &__container {
     display: grid;;
@@ -11,6 +10,7 @@
     min-height: 60px;
     align-items: center;
     justify-content: space-between;
+    position: relative;
   }
 
   &__search {
@@ -27,7 +27,8 @@
     display: none;
     background-color: white;
     position: absolute;
-    top: rem(80px);
+    top: rem(60px);
+    right: 0;
     z-index: 99;
 
     &__list {
@@ -37,8 +38,8 @@
     }
 
     &__item {
-      padding: 15px 20px;
-      font-size: rem(16px);
+      padding: rem(12px) rem(20px);
+      font-size: rem(14px);
 
       &:hover {
         background-color: $light-blue
@@ -51,10 +52,11 @@
       font-size: inherit;
       text-align: left;
     }
+  }
 
-    &_active {
-      display: block;
-    }
+  .current-user:active + .user-panel,
+  .current-user:focus + .user-panel, {
+    display: block;
   }
 
 }
