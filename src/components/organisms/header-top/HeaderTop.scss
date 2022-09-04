@@ -24,12 +24,14 @@
   }
 
   .user-panel {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
     background-color: white;
     position: absolute;
     top: rem(60px);
     right: 0;
     z-index: 99;
+    transition: all 0.3s ease-in-out;
 
     &__list {
       display: flex;
@@ -54,11 +56,10 @@
     }
   }
 
-  .current-user:active + .user-panel,
-  .current-user:focus + .user-panel, {
-    display: block;
+  .active {
+    visibility: visible;
+    opacity: 1;
   }
-
 }
 
 @media (max-width: $medium-tablet) {

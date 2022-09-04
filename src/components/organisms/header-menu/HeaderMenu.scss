@@ -13,14 +13,55 @@
     position: relative;
   }
 
+  &__menu-button {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: white;
+    font-size: rem(16px);
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover,
+    .open {
+      background-color: $dark-blue;
+    }
+
+    svg {
+      fill: white;
+    }
+
+    &.open {
+      background-color: $dark-blue;
+    }
+  }
+
   &__nav-menu {
     padding: 0 rem(24px);
     font-size: rem(14px);
     color: white;
   }
+
+  &__catalog {
+    position: absolute;
+    width: 25%;
+    z-index: 300;
+    top: rem(60px);
+    left: rem(10px);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0ms, opacity 600ms;
+  }
+
+  .open {
+    visibility: visible;
+    opacity: 1;
+  }
+
 }
 
-@media screen and (max-width: $big-tablet){
+@media screen and (max-width: $big-tablet) {
   .menu-header {
     display: none;
   }

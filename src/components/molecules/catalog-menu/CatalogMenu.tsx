@@ -8,15 +8,13 @@ import {
   Parts_AccessoriesIcon,
 } from "../../../assets";
 import { useContext } from "react";
-import { CatalogContext } from "../../../context/catalog.context";
 import { MobileModalContext } from "../../../context/mobile-modal";
 
 export const CatalogMenu = () => {
-  const { openCatalog } = useContext(CatalogContext);
   const { setCloseMobileModal } = useContext(MobileModalContext);
 
   return (
-    <div className={`catalog-menu ${openCatalog && "open"}`}>
+    <div className="catalog-menu">
       <ul className="catalog-menu__list">
         <li className="list-item">
           <NavLink className="item-link" to="#" onClick={setCloseMobileModal}>

@@ -53,11 +53,15 @@ input, select, textarea {
   line-height: 100%;
   border: 1px solid $blue;
   border-radius: 5px;
-  padding: rem(10px) rem(10px) rem(10px) rem(20px);
+  padding: rem(10px);
+}
+
+input[type='checkbox'] {
+  width: rem(16px);
 }
 
 select {
-  background-color: $light-blue
+  background-color: $light-blue;
 }
 
 option {

@@ -47,6 +47,33 @@ const AddNewAd = () => {
           <label htmlFor="text">Текст объявления</label>
           <textarea name="text" id="text" maxLength={2000} />
         </div>
+
+        <div className="form__options row">
+          <div className="region block">
+            <label htmlFor="region">Регион*</label>
+            <select name="region" id="region">
+              <option value="Велосипеды">Велосипеды</option>
+              <option value="Электровелосипеды">Электровелосипеды</option>
+              <option value="Электроскутеры">Электроскутеры</option>
+              <option value="Аксессуары">Аксессуары</option>
+            </select>
+          </div>
+          <div className="price block">
+            <label htmlFor="price">Цена*</label>
+            <span className="row">
+              <input id="price" type="text" />
+              <select name="currency" id="currency">
+                <option value="eur">EUR</option>
+                <option value="usd">USD</option>
+                <option value="mdl">MDL</option>
+              </select>
+              <span className="negotiable">
+                <input id="negotiable" type="checkbox" />
+                <label htmlFor="negotiable">Договорная</label>
+              </span>
+            </span>
+          </div>
+        </div>
       </form>
     </div>
   );

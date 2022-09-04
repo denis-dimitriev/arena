@@ -10,9 +10,16 @@ export const ButtonGhost: React.FC<ButtonProps> = ({
   children,
   className,
   onClick,
+  onMouseLeave,
+  onFocus,
 }) => {
   return (
-    <button className={`${className} button-ghost`} onClick={onClick}>
+    <button
+      className={`${className} button-ghost`}
+      onClick={onClick}
+      onMouseLeave={onMouseLeave}
+      onFocus={onFocus}
+    >
       {children}
     </button>
   );
