@@ -1,6 +1,7 @@
 @import "src/scss/base";
 
 .add-new {
+  min-height: 150vh;
 
   &__title {
     padding: rem(10px) 0;
@@ -27,9 +28,11 @@
 
     &__offer-type {
       display: flex;
+
       column-gap: rem(30px);
       span {
         display: flex;
+        align-items: center;
         column-gap: rem(5px);
       }
     }
@@ -48,6 +51,7 @@
 
     &__options {
       display: flex;
+      align-items: center;
       column-gap: rem(30px);
 
       .region {
@@ -56,8 +60,8 @@
         column-gap: rem(20px);
         .negotiable {
           display: flex;
+          align-items: center;
           column-gap: rem(5px);
-          padding: rem(10px) 0;
           input[type='checkbox'] {
             transform: scale(1.1);
           }

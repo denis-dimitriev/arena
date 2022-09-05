@@ -1,4 +1,5 @@
 import "./AddNewAd.scss";
+import { BicyclesSpecs } from "../../organisms/bicycle-specs/BicyclesSpecs";
 
 const AddNewAd = () => {
   return (
@@ -71,10 +72,15 @@ const AddNewAd = () => {
               </span>
               <span className="negotiable">
                 <input id="negotiable" type="checkbox" />
-                <label htmlFor="negotiable">Договорная</label>
+                <label htmlFor="negotiable">договорная</label>
               </span>
             </div>
           </div>
+        </div>
+
+        <div className="form__specs">
+          характеристики
+          <BicyclesSpecs />
         </div>
       </form>
     </div>
