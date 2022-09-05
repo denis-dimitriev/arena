@@ -1,6 +1,12 @@
 import "./TabletMenu.scss";
 
-import { HomeIcon, MenuIcon, MoreIcon, SearchIcon } from "../../../../assets";
+import {
+  AddIcon,
+  HomeIcon,
+  MenuIcon,
+  MoreIcon,
+  SearchIcon,
+} from "../../../../assets";
 import { NavLink } from "react-router-dom";
 import { ButtonGhost } from "../../../atoms/ui/button-ghost/ButtonGhost";
 import React, { useContext } from "react";
@@ -18,7 +24,7 @@ export const TabletMenu = () => {
     <div className="tablet-menu">
       <ul className="tablet-menu__list">
         <li className="tablet-menu__list-item">
-          <NavLink className="item-link" to="#">
+          <NavLink className="item-link" to=".">
             <ButtonGhost onClick={setCloseMobileModal}>
               <HomeIcon />
               <span className="item-title">Главная</span>
@@ -30,6 +36,14 @@ export const TabletMenu = () => {
             <MenuIcon />
             <span className="item-title">Каталог</span>
           </ButtonGhost>
+        </li>
+        <li className="tablet-menu__list-item">
+          <NavLink className="item-link" to="add-new-advertisement">
+            <ButtonGhost onClick={setCloseMobileModal}>
+              <AddIcon />
+              <span className="item-title">Разместить</span>
+            </ButtonGhost>
+          </NavLink>
         </li>
         <li className="tablet-menu__list-item tablet-menu__list-item_search-hidden">
           <ButtonGhost onClick={openSearchHandler}>

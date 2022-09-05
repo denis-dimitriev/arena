@@ -52,9 +52,16 @@
 
       .region {
       }
-      .price {
-        display: flex;
-        column-gap: rem(30px);
+      .price > .row {
+        column-gap: rem(20px);
+        .negotiable {
+          display: flex;
+          column-gap: rem(5px);
+          padding: rem(10px) 0;
+          input[type='checkbox'] {
+            transform: scale(1.1);
+          }
+        }
       }
     }
 

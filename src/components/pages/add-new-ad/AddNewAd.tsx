@@ -60,18 +60,20 @@ const AddNewAd = () => {
           </div>
           <div className="price block">
             <label htmlFor="price">Цена*</label>
-            <span className="row">
-              <input id="price" type="text" />
-              <select name="currency" id="currency">
-                <option value="eur">EUR</option>
-                <option value="usd">USD</option>
-                <option value="mdl">MDL</option>
-              </select>
+            <div className="row">
+              <span>
+                <input id="price" type="text" />
+                <select name="currency" id="currency">
+                  <option value="eur">EUR</option>
+                  <option value="usd">USD</option>
+                  <option value="mdl">MDL</option>
+                </select>
+              </span>
               <span className="negotiable">
                 <input id="negotiable" type="checkbox" />
                 <label htmlFor="negotiable">Договорная</label>
               </span>
-            </span>
+            </div>
           </div>
         </div>
       </form>
