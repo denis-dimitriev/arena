@@ -1,9 +1,4 @@
-import {
-  ColorsType,
-  MaterialsType,
-  MotorType,
-  RatingType,
-} from "./other-types";
+import { ColorsType, MaterialsType, MotorType } from "./other-types";
 
 export interface IBicycle {
   brand:
@@ -68,11 +63,9 @@ export interface IBicycle {
   brakes: "Барабанный" | "Дисковый" | "Ободной";
   suspension: "Передний" | "Двухподвес" | "Нет";
   components: "Shimano" | "Sram" | "Campagnolo" | "Другой";
-  quantitySpeed: string;
   color: ColorsType;
   condition: "На запчасти" | "Б/у" | "Новый";
   weight: string;
-  rating: RatingType;
 }
 
 export interface IEBicycle extends IBicycle, MotorType {}

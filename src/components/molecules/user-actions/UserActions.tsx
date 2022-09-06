@@ -2,7 +2,7 @@ import "./UserActions.scss";
 
 import { FavoriteRedIcon, WatchedIcon } from "../../../assets";
 import { NavLink } from "react-router-dom";
-import { ButtonBadge } from "../../atoms/ui/button-badge/ButtonBadge";
+import { ButtonBadge } from "../../ui/atoms/button-badge/ButtonBadge";
 
 export const UserActions = () => {
   return (

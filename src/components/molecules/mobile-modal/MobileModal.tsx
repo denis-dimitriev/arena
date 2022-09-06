@@ -1,6 +1,6 @@
 import "./MobileModal.scss";
 
-import { ButtonGhost } from "../../atoms/ui/button-ghost/ButtonGhost";
+import { ButtonGhost } from "../../ui/atoms/button-ghost/ButtonGhost";
 import { CloseIcon } from "../../../assets";
 import React, { ReactNode, useContext } from "react";
 import { MobileModalContext } from "../../../context/mobile-modal";

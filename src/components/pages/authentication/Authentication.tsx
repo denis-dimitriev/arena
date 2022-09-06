@@ -1,7 +1,7 @@
 import "./Authentication.scss";
 
 import { CloseIcon, GoogleIcon } from "../../../assets";
-import { ButtonGhost } from "../../atoms/ui/button-ghost/ButtonGhost";
+import { ButtonGhost } from "../../ui/atoms/button-ghost/ButtonGhost";
 import React, {
   ChangeEvent,
   FormEvent,
@@ -9,7 +9,7 @@ import React, {
   useEffect,
   useState,
 } from "react";
-import { ButtonForm } from "../../atoms/ui/button-form/ButtonForm";
+import { ButtonForm } from "../../ui/atoms/button-form/ButtonForm";
 import { NavLink, useNavigate } from "react-router-dom";
 
 import { getRedirectResult } from "firebase/auth";

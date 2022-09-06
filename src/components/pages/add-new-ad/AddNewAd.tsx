@@ -1,5 +1,27 @@
 import "./AddNewAd.scss";
-import { BicyclesSpecs } from "../../organisms/bicycle-specs/BicyclesSpecs";
+
+import { TechSpecs } from "../../molecules/tech-specs/TechSpecs";
+import { ButtonForm } from "../../ui/atoms/button-form/ButtonForm";
+import { CustomSelect } from "../../ui/custom-select/CustomSelect";
+
+const category = [
+  "Велосипеды",
+  "Электровелосипеды",
+  "Электроскутеры",
+  "Аксессуары",
+];
+const region = [
+  "Кишинёв мун.",
+  "Бельцы мун.",
+  "Тирасполь мун",
+  "Кагул",
+  "Комрат",
+  "Тараклия",
+  "Чимишлия",
+  "Дрокия",
+  "Унгены",
+  "Другое",
+];
 
 const AddNewAd = () => {
   return (
@@ -7,13 +29,7 @@ const AddNewAd = () => {
       <h1 className="add-new__title">Заполните объявление</h1>
       <form id="add-new" className="add-new__form form">
         <div className="form__category block">
-          <label htmlFor="category">Раздел*</label>
-          <select name="category" id="category">
-            <option value="Велосипеды">Велосипеды</option>
-            <option value="Электровелосипеды">Электровелосипеды</option>
-            <option value="Электроскутеры">Электроскутеры</option>
-            <option value="Аксессуары">Аксессуары</option>
-          </select>
+          <CustomSelect label={"Раздел"} arrayToMap={category} />
         </div>
         <div className="form__offer block">
           <p>Тип предложения*</p>
@@ -51,13 +67,7 @@ const AddNewAd = () => {
 
         <div className="form__options row">
           <div className="region block">
-            <label htmlFor="region">Регион*</label>
-            <select name="region" id="region">
-              <option value="Велосипеды">Велосипеды</option>
-              <option value="Электровелосипеды">Электровелосипеды</option>
-              <option value="Электроскутеры">Электроскутеры</option>
-              <option value="Аксессуары">Аксессуары</option>
-            </select>
+            <CustomSelect label={"Регион"} arrayToMap={region} />
           </div>
           <div className="price block">
             <label htmlFor="price">Цена*</label>
@@ -79,9 +89,23 @@ const AddNewAd = () => {
         </div>
 
         <div className="form__specs">
-          характеристики
-          <BicyclesSpecs />
+          <h4>Характеристики</h4>
+          <TechSpecs category={"e-scooter"} />
         </div>
+
+        <div className="form__upload-photo block">
+          <label htmlFor="file-upload">Фотографии</label>
+          <input
+            id="file-upload"
+            name="file"
+            type="file"
+            accept="image/gif, image/jpeg, image/png, image/webp"
+            multiple
+          />
+        </div>
+        <ButtonForm className="form__submit-button">
+          Разместить объявление
+        </ButtonForm>
       </form>
     </div>
   );

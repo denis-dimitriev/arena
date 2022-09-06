@@ -1,7 +1,6 @@
 @import "src/scss/base";
 
 .add-new {
-  min-height: 150vh;
 
   &__title {
     padding: rem(10px) 0;
@@ -9,12 +8,16 @@
 
   .form {
 
+    select {
+      min-width: rem(200px);
+    }
+
     display: flex;
     flex-direction: column;
     row-gap: rem(20px);
 
     &__category {
-      max-width: rem(320px);
+      max-width: rem(200px);
     }
     .block {
       display: flex;
@@ -28,7 +31,6 @@
 
     &__offer-type {
       display: flex;
-
       column-gap: rem(30px);
       span {
         display: flex;
@@ -58,16 +60,20 @@
       }
       .price > .row {
         column-gap: rem(20px);
+
         .negotiable {
           display: flex;
           align-items: center;
           column-gap: rem(5px);
+
           input[type='checkbox'] {
             transform: scale(1.1);
           }
         }
       }
     }
-
+    &__submit-button {
+      max-width: rem(320px);
+    }
   }
 }

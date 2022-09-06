@@ -2,7 +2,7 @@ import "./Card.scss";
 
 import React, { useState } from "react";
 import { FavoriteIcon, FavoriteRedIcon } from "../../../assets";
-import { ButtonGhost } from "../../atoms/ui/button-ghost/ButtonGhost";
+import { ButtonGhost } from "../../ui/atoms/button-ghost/ButtonGhost";
 
 interface CardProps {
   card: {

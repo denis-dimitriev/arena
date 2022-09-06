@@ -3,7 +3,7 @@ import "./HeaderMenu.scss";
 import { MenuIcon } from "../../../assets";
 import { NavMenu } from "../../molecules/nav-menu/NavMenu";
 import { CatalogMenu } from "../../molecules/catalog-menu/CatalogMenu";
-import { ButtonGhost } from "../../atoms/ui/button-ghost/ButtonGhost";
+import { ButtonGhost } from "../../ui/atoms/button-ghost/ButtonGhost";
 import { useState } from "react";
 
 export const HeaderMenu = () => {

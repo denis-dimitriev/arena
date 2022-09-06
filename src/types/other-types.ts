@@ -42,11 +42,11 @@ export type MaterialsType = {
 };
 
 export type MotorType = {
-  maxSpeed: string; // rm per hour
-  MotorPower: string; // 350watt
-  distancePerCharge: string;
-  batteryCapacity: string; // 10A
-  rechargingTime: string;
+  maxSpeed?: string; // rm per hour
+  MotorPower?: string; // 350watt
+  distancePerCharge?: string;
+  batteryCapacity?: string; // 10A
+  rechargingTime?: string;
 };
 
 export type RatingType = {

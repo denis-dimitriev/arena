@@ -1,0 +1,21 @@
+@import "src/scss/base";
+
+.bicycle-specs {
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: rem(10px) 0;
+    column-gap: rem(30px);
+  }
+
+  &__block {
+    min-width: rem(200px);
+    display: flex;
+    flex-direction: column;
+
+    input {
+      width: rem(200px)
+    }
+  }
+}

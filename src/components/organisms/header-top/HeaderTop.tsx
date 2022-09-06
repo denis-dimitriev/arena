@@ -1,12 +1,12 @@
 import "./HeaderTop.scss";
 
-import { Logo } from "../../atoms/ui/logo/Logo";
+import { Logo } from "../../ui/atoms/logo/Logo";
 import { Search } from "../../molecules/search/Search";
 import { UserActions } from "../../molecules/user-actions/UserActions";
-import { ButtonGhost } from "../../atoms/ui/button-ghost/ButtonGhost";
+import { ButtonGhost } from "../../ui/atoms/button-ghost/ButtonGhost";
 import { UserIcon } from "../../../assets";
 import { NavLink } from "react-router-dom";
-import { ButtonForm } from "../../atoms/ui/button-form/ButtonForm";
+import { ButtonForm } from "../../ui/atoms/button-form/ButtonForm";
 import { UserContext } from "../../../context/user.context";
 import { useContext, useState } from "react";
 import { signOutUser } from "../../../utils/firebase.auth";

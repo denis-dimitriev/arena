@@ -1,7 +1,7 @@
 import "./UserPage.scss";
 
 import { NavLink, Route, Routes } from "react-router-dom";
-import { ButtonGhost } from "../../atoms/ui/button-ghost/ButtonGhost";
+import { ButtonGhost } from "../../ui/atoms/button-ghost/ButtonGhost";
 import { UserGeneralData } from "../../sub-routes/user-general-data/UserGeneralData";
 import { UserPersonalData } from "../../sub-routes/user-personal-data/UserPersonalData";
 import { ChangePassword } from "../../sub-routes/change-password/ChangePassword";

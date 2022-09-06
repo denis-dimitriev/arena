@@ -1,5 +1,5 @@
 import "./UserPersonalData.scss";
-import { ButtonForm } from "../../atoms/ui/button-form/ButtonForm";
+import { ButtonForm } from "../../ui/atoms/button-form/ButtonForm";
 
 export const UserPersonalData = () => {
   return (
