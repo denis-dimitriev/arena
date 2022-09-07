@@ -1,5 +1,6 @@
-export interface IAccessories {
-  id: string;
+import { IAdvertisement } from "./advertisement";
+
+export interface IAccessories extends IAdvertisement {
   parts:
     | "Покрышки и Камеры"
     | "Колеса"
@@ -12,7 +13,7 @@ export interface IAccessories {
     | "Педали"
     | "Рамы"
     | "Другое";
-  accessories:
+  accessoriesType:
     | "Шлемы, защита, очки"
     | "Фонари"
     | "Сумки и багажники"

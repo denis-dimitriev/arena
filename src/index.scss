@@ -36,10 +36,6 @@ li {
   list-style: none;
 }
 
-img {
-  vertical-align: top;
-}
-
 svg {
   width: 100%;
   height: rem(24px);
@@ -66,4 +62,8 @@ select {
 
 option {
   background-color: white;
+}
+
+button {
+  outline: none;
 }

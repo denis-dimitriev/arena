@@ -1,8 +1,9 @@
-import "./AddNewAd.scss";
+import "./AddNewAdvertisement.scss";
 
-import { TechSpecs } from "../../molecules/tech-specs/TechSpecs";
+import { AdsSpecs } from "../../molecules/ads-specs/AdsSpecs";
 import { ButtonForm } from "../../ui/atoms/button-form/ButtonForm";
 import { CustomSelect } from "../../ui/custom-select/CustomSelect";
+import { region } from "../../../models/region.model";
 
 const category = [
   "Велосипеды",
@@ -10,20 +11,8 @@ const category = [
   "Электроскутеры",
   "Аксессуары",
 ];
-const region = [
-  "Кишинёв мун.",
-  "Бельцы мун.",
-  "Тирасполь мун",
-  "Кагул",
-  "Комрат",
-  "Тараклия",
-  "Чимишлия",
-  "Дрокия",
-  "Унгены",
-  "Другое",
-];
 
-const AddNewAd = () => {
+const AddNewAdvertisement = () => {
   return (
     <div className="add-new">
       <h1 className="add-new__title">Заполните объявление</h1>
@@ -90,7 +79,7 @@ const AddNewAd = () => {
 
         <div className="form__specs">
           <h4>Характеристики</h4>
-          <TechSpecs category={"e-scooter"} />
+          <AdsSpecs category={"e-scooter"} />
         </div>
 
         <div className="form__upload-photo block">
@@ -111,4 +100,4 @@ const AddNewAd = () => {
   );
 };
 
-export default AddNewAd;
+export default AddNewAdvertisement;

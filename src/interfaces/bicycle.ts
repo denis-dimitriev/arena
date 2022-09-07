@@ -1,6 +1,7 @@
-import { ColorsType, MaterialsType, MotorType } from "./other-types";
+import { Colors, Materials, Motor } from "./other-types";
+import { IAdvertisement } from "./advertisement";
 
-export interface IBicycle {
+export interface IBicycle extends IAdvertisement {
   brand:
     | "AIST"
     | "Author"
@@ -59,13 +60,13 @@ export interface IBicycle {
     | "28"
     | "29"
     | "Другое";
-  frameMaterial: MaterialsType;
+  frameMaterial: Materials;
   brakes: "Барабанный" | "Дисковый" | "Ободной";
   suspension: "Передний" | "Двухподвес" | "Нет";
   components: "Shimano" | "Sram" | "Campagnolo" | "Другой";
-  color: ColorsType;
+  color: Colors;
   condition: "На запчасти" | "Б/у" | "Новый";
   weight: string;
 }
 
-export interface IEBicycle extends IBicycle, MotorType {}
+export interface IEBicycle extends IBicycle, Motor {}

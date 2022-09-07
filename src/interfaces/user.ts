@@ -1,4 +1,5 @@
-import { RatingType, RegionType } from "./other-types";
+import { Rating } from "./other-types";
+import { Region } from "../models/region.model";
 
 export interface IUser {
   id: string;
@@ -9,8 +10,8 @@ export interface IUser {
   photo: string;
   password: string;
   dateRegistration: Date;
-  region: RegionType;
-  rating: RatingType;
+  region: Region;
+  rating: Rating;
   ads: [];
   adsHistory: [];
   favorites: [];

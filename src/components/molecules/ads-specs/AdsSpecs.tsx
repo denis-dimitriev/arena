@@ -1,4 +1,4 @@
-import "./TechSpecs.scss";
+import "./AdsSpecs.scss";
 
 import { CustomSelect } from "../../ui/custom-select/CustomSelect";
 
@@ -97,7 +97,7 @@ interface BicyclesSpecsProps {
   category: "bicycle" | "e-bicycle" | "e-scooter";
 }
 
-export const TechSpecs: React.FC<BicyclesSpecsProps> = ({ category }) => {
+export const AdsSpecs: React.FC<BicyclesSpecsProps> = ({ category }) => {
   return (
     <>
       {category !== "e-scooter" && (
