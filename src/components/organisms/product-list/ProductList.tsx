@@ -2,15 +2,16 @@ import "./ProductList.scss";
 
 import { NavLink } from "react-router-dom";
 import React from "react";
-import { Icarousel } from "../carousel/Carousel";
 import { Card } from "../../molecules/card/Card";
+import { IBicycle } from "../../../interfaces/bicycle";
 
 interface ProductListProps {
-  ads: Icarousel[];
+  ads: IBicycle[];
   title?: string;
+  route?: string;
 }
 
-export const ProductList: React.FC<ProductListProps> = ({ ads, title }) => {
+export const ProductList: React.FC<ProductListProps> = ({ ads, title, route }) => {
   return (
     <div className="product-list">
       <div className="product-list__top">
@@ -21,7 +22,7 @@ export const ProductList: React.FC<ProductListProps> = ({ ads, title }) => {
           const { id } = ad;
           return (
             <li key={id} className="product-list__item">
-              <NavLink to="#">
+              <NavLink to={`${id}`}>
                 <Card card={ad} />
               </NavLink>
             </li>

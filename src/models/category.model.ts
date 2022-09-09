@@ -1,22 +1,15 @@
-import {
-  BicycleIcon,
-  EBicycleIcon,
-  EScooterIcon,
-  Parts_AccessoriesIcon,
-} from "../assets";
+import { BicycleIcon, EBicycleIcon, EScooterIcon, Parts_AccessoriesIcon } from "../assets";
 
-export type Category =
-  | "Велосипеды"
-  | "Электровелосипеды"
-  | "Электроскутеры"
-  | "Аксессуары";
+export type Category = "Велосипеды" | "Электровелосипеды" | "Электроскутеры" | "Аксессуары";
 
-export const category: Category[] = [
-  "Велосипеды",
-  "Электровелосипеды",
-  "Электроскутеры",
-  "Аксессуары",
-];
+export const category: Category[] = ["Велосипеды", "Электровелосипеды", "Электроскутеры", "Аксессуары"];
+
+export enum ECategory {
+  bicycles = "Велосипеды",
+  electricBicycles = "Электровелосипеды",
+  electricScooters = "Электроскутеры",
+  accessories = "Аксессуары",
+}
 
 export const categoryLinks = [
   { id: 1, path: "category/bicycles", name: "Велосипеды", icon: BicycleIcon },

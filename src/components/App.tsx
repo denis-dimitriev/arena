@@ -10,8 +10,8 @@ import Homepage from "./pages/homepage/Homepage";
 import Authentication from "./pages/authentication/Authentication";
 import UserPage from "./pages/user-page/UserPage";
 import AddNewAdvertisement from "./pages/add-new-advertisement/AddNewAdvertisement";
-import ProductPage from "./pages/product-page/ProductPage";
 import Category from "./pages/category-page/Category";
+import ProductItemPage from "./pages/product-item-page/ProductItemPage";
 
 const App = () => {
   const { renderingMobileMenu } = useContext(MobileModalContext);
@@ -25,7 +25,7 @@ const App = () => {
           <Route path="authentication" element={<Authentication />} />
           <Route path="user-page/*" element={<UserPage />} />
           <Route path="add-new-advertisement" element={<AddNewAdvertisement />} />
-          <Route path="category/:category" element={<Category />} />
+          <Route path="category/*" element={<Category />} />
         </Routes>
         {renderingMobileMenu}
         <TabletMenu />

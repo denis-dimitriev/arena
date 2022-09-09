@@ -1,14 +1,13 @@
 import "./Homepage.scss";
 
-import { Carousel, newAdsAdded } from "../../organisms/carousel/Carousel";
 import { ProductList } from "../../organisms/product-list/ProductList";
 import { Outlet } from "react-router-dom";
+import { bicycleTestAd } from "../../../models/bicycleAd.model";
 
 const Homepage = () => {
   return (
     <div className="homepage">
-      <Carousel />
-      <ProductList title={"Сигвеи"} ads={newAdsAdded} />
+      <ProductList title={"Сигвеи"} ads={bicycleTestAd} />
       <Outlet />
     </div>
   );

@@ -1,8 +1,7 @@
 @import "src/scss/base";
 
 .card {
-  min-width: rem(310px);
-  padding: rem(10px);
+  min-width: rem(300px);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -15,9 +14,11 @@
 
   img {
     width: 100%;
-    border-radius: rem(4px);
+    height: rem(200px);
+    aspect-ratio: 16/9;
     object-fit: cover;
     object-position: center;
+    border-radius: rem(4px) rem(4px) 0 0;
   }
   .card-info {
     .card-title {
@@ -35,14 +36,14 @@
   }
 
   &__favorites {
-    width: rem(50px);
-    height: rem(50px);
+    width: rem(40px);
+    height: rem(40px);
     border-radius: 50%;
     visibility: hidden;
     background-color: white;
     position: absolute;
-    top: rem(15px);
-    right: rem(15px);
+    top: rem(5px);
+    right: rem(5px);
     display: flex;
     align-items: center;
     justify-content: center;
